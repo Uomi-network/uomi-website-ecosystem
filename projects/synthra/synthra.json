@@ -1,6 +1,6 @@
 {
   "name": "Synthra Swap",
-  "description": "Synthra Swap is a decentralized exchange (DEX) that allows users to trade synthetic assets on the Ethereum blockchain. It provides a platform for creating and exchanging synthetic assets that track the value of real-world assets, enabling users to gain exposure to various markets without needing to hold the underlying assets.",
+  "description": "Synthra Swap is a decentralized exchange (DEX) that allows users to trade tokens directly from their wallets without the need for an intermediary. It supports a wide range of tokens and provides a user-friendly interface for trading.",
   "tags": ["DeFi", "DEX"],
   "primaryTag": "DEX",
   "xLink": "https://twitter.com/Synthra_Swap",
