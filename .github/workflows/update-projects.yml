@@ -31,6 +31,18 @@ jobs:
         const projectsDir = './projects';
         const projects = [];
         
+        // Funzione per trovare file immagine con diverse estensioni
+        function findImageFile(dir, baseName) {
+          const extensions = ['webp', 'png', 'jpg', 'jpeg', 'svg'];
+          for (const ext of extensions) {
+            const filePath = path.join(dir, \`\${baseName}.\${ext}\`);
+            if (fs.existsSync(filePath)) {
+              return { path: filePath, extension: ext };
+            }
+          }
+          return null;
+        }
+        
         // Leggi tutte le cartelle dei progetti
         const projectFolders = fs.readdirSync(projectsDir).filter(item => {
           return fs.statSync(path.join(projectsDir, item)).isDirectory();
@@ -47,20 +59,26 @@ jobs:
             try {
               const projectData = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
               
-              // Aggiungi i path delle immagini
-              const coverPath = path.join(projectPath, 'cover.webp');
-              const primaryPath = path.join(projectPath, 'primary.webp');
+              // Cerca i file immagine con diverse estensioni
+              const coverFile = findImageFile(projectPath, 'cover');
+              const primaryFile = findImageFile(projectPath, 'primary');
               
-              projectData.id = folder;
-              projectData.coverImage = fs.existsSync(coverPath) ? 
-                \`https://raw.githubusercontent.com/\${process.env.GITHUB_REPOSITORY}/main/projects/\${folder}/cover.webp\` : null;
-              projectData.primaryImage = fs.existsSync(primaryPath) ? 
-                \`https://raw.githubusercontent.com/\${process.env.GITHUB_REPOSITORY}/main/projects/\${folder}/primary.webp\` : null;
-              
-              projects.push(projectData);
+              // Solo se esistono ENTRAMBE le immagini, aggiungi il progetto
+              if (coverFile && primaryFile) {
+                projectData.id = folder;
+                projectData.coverImage = \`https://raw.githubusercontent.com/\${process.env.GITHUB_REPOSITORY}/main/projects/\${folder}/cover.\${coverFile.extension}\`;
+                projectData.primaryImage = \`https://raw.githubusercontent.com/\${process.env.GITHUB_REPOSITORY}/main/projects/\${folder}/primary.\${primaryFile.extension}\`;
+                
+                projects.push(projectData);
+                console.log(\`✓ Added project: \${projectData.name}\`);
+              } else {
+                console.log(\`⚠ Skipped \${folder}: Missing required images (cover: \${coverFile ? '✓' : '✗'}, primary: \${primaryFile ? '✓' : '✗'})\`);
+              }
             } catch (error) {
-              console.error(\`Error parsing \${jsonPath}:\`, error);
+              console.error(\`❌ Error parsing \${jsonPath}:\`, error);
             }
+          } else {
+            console.log(\`⚠ Skipped \${folder}: No JSON file found\`);
           }
         });
         
@@ -74,7 +92,7 @@ jobs:
           count: projects.length
         }, null, 2));
         
-        console.log(\`Generated projects.json with \${projects.length} projects\`);
+        console.log(\`\n🎉 Generated projects.json with \${projects.length} projects\`);
         "
         
     - name: Commit and push changes
