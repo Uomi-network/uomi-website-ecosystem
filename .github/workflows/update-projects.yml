@@ -1,0 +1,90 @@
+name: Update Projects JSON
+
+on:
+  push:
+    branches: [ main ]
+    paths: [ 'projects/**' ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-projects:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        
+    - name: Generate projects.json
+      run: |
+        node -e "
+        const fs = require('fs');
+        const path = require('path');
+        
+        const projectsDir = './projects';
+        const projects = [];
+        
+        // Leggi tutte le cartelle dei progetti
+        const projectFolders = fs.readdirSync(projectsDir).filter(item => {
+          return fs.statSync(path.join(projectsDir, item)).isDirectory();
+        });
+        
+        projectFolders.forEach(folder => {
+          const projectPath = path.join(projectsDir, folder);
+          const jsonFiles = fs.readdirSync(projectPath).filter(file => file.endsWith('.json'));
+          
+          if (jsonFiles.length > 0) {
+            const jsonFile = jsonFiles[0]; // Prendi il primo file JSON
+            const jsonPath = path.join(projectPath, jsonFile);
+            
+            try {
+              const projectData = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
+              
+              // Aggiungi i path delle immagini
+              const coverPath = path.join(projectPath, 'cover.webp');
+              const primaryPath = path.join(projectPath, 'primary.webp');
+              
+              projectData.id = folder;
+              projectData.coverImage = fs.existsSync(coverPath) ? 
+                \`https://raw.githubusercontent.com/\${process.env.GITHUB_REPOSITORY}/main/projects/\${folder}/cover.webp\` : null;
+              projectData.primaryImage = fs.existsSync(primaryPath) ? 
+                \`https://raw.githubusercontent.com/\${process.env.GITHUB_REPOSITORY}/main/projects/\${folder}/primary.webp\` : null;
+              
+              projects.push(projectData);
+            } catch (error) {
+              console.error(\`Error parsing \${jsonPath}:\`, error);
+            }
+          }
+        });
+        
+        // Ordina i progetti per nome
+        projects.sort((a, b) => a.name.localeCompare(b.name));
+        
+        // Scrivi il file projects.json
+        fs.writeFileSync('projects.json', JSON.stringify({
+          projects: projects,
+          lastUpdated: new Date().toISOString(),
+          count: projects.length
+        }, null, 2));
+        
+        console.log(\`Generated projects.json with \${projects.length} projects\`);
+        "
+        
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add projects.json
+        if git diff --staged --quiet; then
+          echo "No changes to commit"
+        else
+          git commit -m "Auto-update projects.json [skip ci]"
+          git push
+        fi
