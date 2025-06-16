@@ -14,8 +14,24 @@
       "id": "synthra",
       "coverImage": "https://raw.githubusercontent.com/Uomi-network/uomi-website-ecosystem/main/projects/synthra/cover.jpeg",
       "primaryImage": "https://raw.githubusercontent.com/Uomi-network/uomi-website-ecosystem/main/projects/synthra/primary.jpg"
+    },
+    {
+      "name": "VIA Labs",
+      "description": "VIA Labs bridges the gap between Web2 and Web3, unifying fragmented blockchain ecosystems into a seamless network of possibilities.",
+      "tags": [
+        "Oracles",
+        "Bridge",
+        "INFRA"
+      ],
+      "primaryTag": "INFRA",
+      "xLink": "https://x.com/VIA_Labs",
+      "websiteLink": "https://vialabs.io/",
+      "category": "INFRA",
+      "id": "via-labs",
+      "coverImage": "https://raw.githubusercontent.com/Uomi-network/uomi-website-ecosystem/main/projects/via-labs/cover.jpeg",
+      "primaryImage": "https://raw.githubusercontent.com/Uomi-network/uomi-website-ecosystem/main/projects/via-labs/primary.jpg"
     }
   ],
-  "lastUpdated": "2025-05-26T09:59:33.610Z",
-  "count": 1
+  "lastUpdated": "2025-06-12T13:19:04.947Z",
+  "count": 2
 }
