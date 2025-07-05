@@ -1,6 +1,21 @@
 {
   "projects": [
     {
+      "name": "Simulacra",
+      "description": "Simulacra is the first onchain village governed entirely by autonomous AI agents. You can watch them evolve, interact, and place bets on what they’ll do next. Their goal? To become the richest agent in the village, and they’ll do whatever it takes to get there.",
+      "tags": [
+        "DeFi",
+        "App"
+      ],
+      "primaryTag": "App",
+      "xLink": "https://twitter.com/Simulacradotbet",
+      "websiteLink": "https:/simulacra.bet",
+      "category": "App",
+      "id": "simulacra",
+      "coverImage": "https://raw.githubusercontent.com/Uomi-network/uomi-website-ecosystem/main/projects/simulacra/cover.jpeg",
+      "primaryImage": "https://raw.githubusercontent.com/Uomi-network/uomi-website-ecosystem/main/projects/simulacra/primary.png"
+    },
+    {
       "name": "Synthra Swap",
       "description": "Synthra Swap is a decentralized exchange (DEX) that allows users to trade tokens directly from their wallets without the need for an intermediary. It supports a wide range of tokens and provides a user-friendly interface for trading.",
       "tags": [
@@ -32,6 +47,6 @@
       "primaryImage": "https://raw.githubusercontent.com/Uomi-network/uomi-website-ecosystem/main/projects/via-labs/primary.jpg"
     }
   ],
-  "lastUpdated": "2025-07-04T14:57:40.932Z",
-  "count": 2
+  "lastUpdated": "2025-07-05T13:48:40.474Z",
+  "count": 3
 }
