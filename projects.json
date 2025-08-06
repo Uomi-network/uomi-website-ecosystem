@@ -1,6 +1,22 @@
 {
   "projects": [
     {
+      "name": "OmniHub",
+      "description": "OmniHub one of the leading launchpads for creating NFT collections. Designed for both seasoned creators and beginners, OmniHub combines an intuitive interface with cutting-edge AI technology, making it seamless to create unique digital assets in over 50 EVM chains.",
+      "tags": [
+        "NFT",
+        "App",
+        "Launchpad"
+      ],
+      "primaryTag": "App",
+      "xLink": "https://x.com/Omni_Hub",
+      "websiteLink": "https://omnihub.xyz/",
+      "category": "App",
+      "id": "omnihub",
+      "coverImage": "https://raw.githubusercontent.com/Uomi-network/uomi-website-ecosystem/main/projects/omnihub/cover.jpeg",
+      "primaryImage": "https://raw.githubusercontent.com/Uomi-network/uomi-website-ecosystem/main/projects/omnihub/primary.png"
+    },
+    {
       "name": "Simulacra",
       "description": "Simulacra is the first onchain village governed entirely by autonomous AI agents. You can watch them evolve, interact, and place bets on what they’ll do next. Their goal? To become the richest agent in the village, and they’ll do whatever it takes to get there.",
       "tags": [
@@ -47,6 +63,6 @@
       "primaryImage": "https://raw.githubusercontent.com/Uomi-network/uomi-website-ecosystem/main/projects/via-labs/primary.jpg"
     }
   ],
-  "lastUpdated": "2025-07-05T13:51:26.407Z",
-  "count": 3
+  "lastUpdated": "2025-08-06T15:40:38.871Z",
+  "count": 4
 }
