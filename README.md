@@ -1,5 +1,7 @@
 # 🌟 Ecosystem Projects Repository
 
+[![Auto-Update Projects](https://github.com/Uomi-network/uomi-website-ecosystem/actions/workflows/update-projects.yml/badge.svg)](https://github.com/Uomi-network/uomi-website-ecosystem/actions/workflows/update-projects.yml)
+
 A GitHub-powered backend system for managing and showcasing ecosystem projects with automatic JSON generation and image hosting.
 
 [![Auto-Update Projects](https://github.com/Uomi-network/uomi-website-ecosystem/actions/workflows/update-projects.yml/badge.svg)](https://github.com/Uomi-network/uomi-website-ecosystem/actions/workflows/update-projects.yml)
