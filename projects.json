@@ -24,12 +24,28 @@
         "App"
       ],
       "primaryTag": "App",
-      "xLink": "https://twitter.com/Simulacradotbet",
+      "xLink": "https://x.com/Simulacradotbet",
       "websiteLink": "https://simulacra.bet",
       "category": "App",
       "id": "simulacra",
       "coverImage": "https://raw.githubusercontent.com/Uomi-network/uomi-website-ecosystem/main/projects/simulacra/cover.jpeg",
       "primaryImage": "https://raw.githubusercontent.com/Uomi-network/uomi-website-ecosystem/main/projects/simulacra/primary.png"
+    },
+    {
+      "name": "Sweep",
+      "description": "Sweep is a community-based Multi-Chain NFT launcher designed to simplify and supercharge NFT drops on all compatible EVM chains.",
+      "tags": [
+        "NFT",
+        "App",
+        "Launchpad"
+      ],
+      "primaryTag": "App",
+      "xLink": "https://x.com/sweep_haus",
+      "websiteLink": "https://sweep.haus/",
+      "category": "App",
+      "id": "sweep",
+      "coverImage": "https://raw.githubusercontent.com/Uomi-network/uomi-website-ecosystem/main/projects/sweep/cover.jpeg",
+      "primaryImage": "https://raw.githubusercontent.com/Uomi-network/uomi-website-ecosystem/main/projects/sweep/primary.jpg"
     },
     {
       "name": "Synthra Swap",
@@ -39,7 +55,7 @@
         "DEX"
       ],
       "primaryTag": "DEX",
-      "xLink": "https://twitter.com/Synthra_Swap",
+      "xLink": "https://x.com/Synthra_Swap",
       "websiteLink": "https://synthra.org",
       "category": "DEX",
       "id": "synthra",
@@ -63,6 +79,6 @@
       "primaryImage": "https://raw.githubusercontent.com/Uomi-network/uomi-website-ecosystem/main/projects/via-labs/primary.jpg"
     }
   ],
-  "lastUpdated": "2025-08-07T09:28:50.324Z",
-  "count": 4
+  "lastUpdated": "2025-08-19T10:01:22.364Z",
+  "count": 5
 }
