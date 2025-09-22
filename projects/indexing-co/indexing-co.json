@@ -1,0 +1,9 @@
+{
+  "name": "Indexing Co",
+  "description": "Distributed ETL for blockchain data. High volume, low latency infra for apps that scale.",
+  "tags": ["Infrastructure", "Dev Tooling", "Analytics", "Payments", "Cross-Chain"],
+  "primaryTag": "Infrastructure",
+  "xLink": "https://twitter.com/indexingco",
+  "websiteLink": "https://www.indexing.co",
+  "category": "Infra"
+}
