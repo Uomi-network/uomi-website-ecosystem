@@ -17,6 +17,22 @@
       "primaryImage": "https://raw.githubusercontent.com/Uomi-network/uomi-website-ecosystem/main/projects/omnihub/primary.png"
     },
     {
+      "name": "On-Chain Check-in",
+      "description": "On-chain Check-in transforms daily blockchain activity into a simple ritual.",
+      "tags": [
+        "DeFi",
+        "Cross-chain",
+        "Social"
+      ],
+      "primaryTag": "DeFi",
+      "xLink": "https://www.onchain-checkin.xyz",
+      "websiteLink": "https://x.com/on_check_in",
+      "category": "App",
+      "id": "onchain-checkin",
+      "coverImage": "https://raw.githubusercontent.com/Uomi-network/uomi-website-ecosystem/main/projects/onchain-checkin/cover.jpg",
+      "primaryImage": "https://raw.githubusercontent.com/Uomi-network/uomi-website-ecosystem/main/projects/onchain-checkin/primary.jpg"
+    },
+    {
       "name": "PawFun",
       "description": "Pawfun is the native memecoin launchpad on UOMI. Launch and trade with one click. Rug-proof with no hidden allocations. Built for simplicity and powered by the community.",
       "tags": [
@@ -95,6 +111,6 @@
       "primaryImage": "https://raw.githubusercontent.com/Uomi-network/uomi-website-ecosystem/main/projects/via-labs/primary.jpg"
     }
   ],
-  "lastUpdated": "2025-09-20T11:01:08.695Z",
-  "count": 6
+  "lastUpdated": "2025-09-22T14:28:16.859Z",
+  "count": 7
 }
