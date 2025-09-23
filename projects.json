@@ -1,6 +1,24 @@
 {
   "projects": [
     {
+      "name": "Indexing Co",
+      "description": "Distributed ETL for blockchain data. High volume, low latency infra for apps that scale.",
+      "tags": [
+        "Infrastructure",
+        "Dev Tooling",
+        "Analytics",
+        "Payments",
+        "Cross-Chain"
+      ],
+      "primaryTag": "Infrastructure",
+      "xLink": "https://twitter.com/indexingco",
+      "websiteLink": "https://www.indexing.co",
+      "category": "Infra",
+      "id": "indexing-co",
+      "coverImage": "https://raw.githubusercontent.com/Uomi-network/uomi-website-ecosystem/main/projects/indexing-co/cover.png",
+      "primaryImage": "https://raw.githubusercontent.com/Uomi-network/uomi-website-ecosystem/main/projects/indexing-co/primary.png"
+    },
+    {
       "name": "OmniHub",
       "description": "OmniHub one of the leading launchpads for creating NFT collections. Designed for both seasoned creators and beginners, OmniHub combines an intuitive interface with cutting-edge AI technology, making it seamless to create unique digital assets in over 50 EVM chains.",
       "tags": [
@@ -111,6 +129,6 @@
       "primaryImage": "https://raw.githubusercontent.com/Uomi-network/uomi-website-ecosystem/main/projects/via-labs/primary.jpg"
     }
   ],
-  "lastUpdated": "2025-09-23T06:53:29.320Z",
-  "count": 7
+  "lastUpdated": "2025-09-23T06:55:37.869Z",
+  "count": 8
 }
